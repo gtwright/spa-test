@@ -25,9 +25,9 @@ export default function App() {
       </nav>
 
       <Switch>
-        <Route basename={basename} exact path="/" component={Home} />
-        <Route basename={basename} path="/example" component={ExampleComponent} />
-        <Route basename={basename} component={PageNotFound} />
+        <Route exact path="/" component={Home} />
+        <Route path="/example" component={ExampleComponent} />
+        <Route component={PageNotFound} />
       </Switch>
 
       <div style={s.creditLine}>
