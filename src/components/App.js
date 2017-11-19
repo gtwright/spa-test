@@ -7,6 +7,8 @@ import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
 import s from '../styles/app.style';
 
+let basename = "/spa-test";
+
 export default function App() {
   return (
     <div style={s.root}>
@@ -22,10 +24,10 @@ export default function App() {
         <Breadcrumbs />
       </nav>
 
-      <Switch basename="/spa-test">
-        <Route exact path="/" component={Home} />
-        <Route path="/example" component={ExampleComponent} />
-        <Route component={PageNotFound} />
+      <Switch>
+        <Route basename={basename} exact path="/" component={Home} />
+        <Route basename={basename} path="/example" component={ExampleComponent} />
+        <Route basename={basename} component={PageNotFound} />
       </Switch>
 
       <div style={s.creditLine}>
