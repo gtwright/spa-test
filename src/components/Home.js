@@ -7,7 +7,6 @@ export default function Home() {
       <p>
         This is an example single page app built.
       </p>
-      </div>
     </div>
   );
 }
