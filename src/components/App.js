@@ -22,7 +22,7 @@ export default function App() {
         <Breadcrumbs />
       </nav>
 
-      <Switch>
+      <Switch basename="/spa-test">
         <Route exact path="/" component={Home} />
         <Route path="/example" component={ExampleComponent} />
         <Route component={PageNotFound} />
